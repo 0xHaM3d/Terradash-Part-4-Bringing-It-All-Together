@@ -20,7 +20,7 @@ st.write("")
 st.subheader('Network Performance Overall View')
 
 
-@st.cache(ttl=10000)
+# @st.cache(ttl=10000)
 def gat_data(query):
     if query == 'Network Performance Overall View':
         return pd.read_json(
@@ -73,7 +73,7 @@ st.write("")
 st.subheader('Transaction Overall View')
 
 
-@st.cache(ttl=10000)
+# @st.cache(ttl=10000)
 def gat_data(query):
     if query == 'Transaction Overall View':
         return pd.read_json(
@@ -129,7 +129,7 @@ fig.update_layout(title_text='Transactions Fee($) Moving Averages')
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 
-@st.cache(ttl=10000)
+# @st.cache(ttl=10000)
 def gat_data(query):
     if query == 'whales Behaviour':
         return pd.read_json(
@@ -150,7 +150,7 @@ fig = px.line(df, x='DATE', y=['TX_CNT', 'MOVED_VOLUME', 'NET_WHALES_BEHAVIOR'],
 fig.update_layout(title_text='Transaction, NET Behaving & Moved Volume per day')
 st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
-@st.cache(ttl=10000)
+# @st.cache(ttl=10000)
 def gat_data(query):
     if query == 'Activity per Platform':
         return pd.read_json(
@@ -186,7 +186,7 @@ st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 st.subheader('New Users Over Time')
 
 
-@st.cache(ttl=10000)
+# @st.cache(ttl=10000)
 def gat_data(query):
     if query == 'New Users':
         return pd.read_json(
@@ -215,7 +215,7 @@ In the dot plots, when the  dot’s color become darker the rate went up and vic
          )
 
 
-@st.cache(ttl=10000)
+# @st.cache(ttl=10000)
 def gat_data(query):
     if query == 'Success transactions per Minute & Failed Rate':
         return pd.read_json(
@@ -241,7 +241,7 @@ with c2:
     st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 
-@st.cache(ttl=10000)
+# @st.cache(ttl=10000)
 def gat_data(query):
     if query == 'Success Tx/Minute & Failed Rate in Total':
         return pd.read_json(
